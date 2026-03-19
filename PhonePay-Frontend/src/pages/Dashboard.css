@@ -1,0 +1,78 @@
+.dashboard{
+background:#f5f5f5;
+min-height:100vh;
+}
+
+.header{
+background:linear-gradient(135deg,#7b2ff7,#a4508b);
+padding:20px;
+text-align:center;
+color:white;
+}
+
+.menu{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:15px;
+}
+
+.menu button{
+background:white;
+border:none;
+padding:10px 20px;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+color:#7b2ff7;
+transition:0.2s;
+}
+
+.menu button:hover{
+transform:scale(1.05);
+}
+
+.wallet-card{
+background:linear-gradient(135deg,#7b2ff7,#a4508b);
+width:350px;
+margin:40px auto;
+padding:30px;
+border-radius:20px;
+text-align:center;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.add-money-popup{
+
+width:350px;
+margin:30px auto;
+padding:25px;
+background:white;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+text-align:center;
+
+}
+
+.add-money-popup input{
+
+width:90%;
+padding:10px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+
+}
+
+.add-money-popup button{
+
+width:90%;
+padding:10px;
+background:#7b2ff7;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+
+}
