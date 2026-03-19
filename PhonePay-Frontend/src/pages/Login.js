@@ -19,38 +19,38 @@ function Login() {
   };
 
   const handleLogin = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  try {
+    try {
 
-    const response = await fetch("http://localhost:8080/user/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(loginData)
-    });
+      const response = await fetch("https://phonepay-wallet.onrender.com/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(loginData)
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (response.ok && data.message === "Login successful") {
+      if (response.ok && data.message === "Login successful") {
 
-      localStorage.setItem("phoneNumber", loginData.phoneNumber);
-      localStorage.setItem("userId", data.userId);
+        localStorage.setItem("phoneNumber", loginData.phoneNumber);
+        localStorage.setItem("userId", data.userId);
 
-      navigate("/dashboard");
+        navigate("/dashboard");
 
-    } else {
-      alert("Invalid phone number / pin");
+      } else {
+        alert(data.message || "Invalid phone number or PIN");
+      }
+
+    } catch (error) {
+      console.error("Login Error:", error);
+      alert("Unable to connect to server. Please try again.");
     }
-
-  } catch (error) {
-    alert("Invalid details. Please try again.");
-  }
-};
+  };
 
   return (
-
     <div className="login-container">
 
       <div className="login-card">
@@ -93,7 +93,6 @@ function Login() {
       </div>
 
     </div>
-
   );
 }
 

@@ -24,7 +24,7 @@ function Register() {
 
     e.preventDefault();
 
-    const response = await fetch("http://localhost:8080/user/register",{
+    const response = await fetch("https://phonepay-wallet.onrender.com/user/register", {
       method:"POST",
       headers:{
         "Content-Type":"application/json"

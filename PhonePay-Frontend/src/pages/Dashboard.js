@@ -20,7 +20,7 @@ function Dashboard() {
       try {
 
         const response = await fetch(
-          `http://localhost:8080/wallet/balance?userId=${userId}`
+          `https://phonepay-wallet.onrender.com/wallet/balance?userId=${userId}`
         );
 
         const text = await response.text();
@@ -56,7 +56,7 @@ function Dashboard() {
     try {
 
       const response = await fetch(
-        "http://localhost:8080/wallet/send-money",
+        "https://phonepay-wallet.onrender.com/wallet/send-money",
         {
           method: "POST",
           headers: {
@@ -75,7 +75,7 @@ function Dashboard() {
 
       // Reload wallet balance
       const balanceResponse = await fetch(
-        `http://localhost:8080/wallet/balance?userId=${userId}`
+        `https://phonepay-wallet.onrender.com/wallet/balance?userId=${userId}`
       );
 
       const balanceText = await balanceResponse.text();
@@ -105,7 +105,7 @@ function Dashboard() {
     try {
 
       const response = await fetch(
-        "http://localhost:8080/wallet/add-money",
+        "https://phonepay-wallet.onrender.com/wallet/add-money",
         {
           method: "POST",
           headers: {
@@ -142,7 +142,7 @@ function Dashboard() {
     try {
 
       const response = await fetch(
-        `http://localhost:8080/transactions/user/${userId}`
+        `https://phonepay-wallet.onrender.com/transactions/user/${userId}`
       );
 
       const data = await response.json();
