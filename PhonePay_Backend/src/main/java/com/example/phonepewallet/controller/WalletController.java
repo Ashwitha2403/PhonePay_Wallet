@@ -5,7 +5,7 @@ import com.example.phonepewallet.service.WalletService;
 import com.example.phonepewallet.dto.AddMoneyRequest;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:3001")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/wallet")
 public class WalletController {
